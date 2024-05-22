@@ -2,38 +2,37 @@ import React from 'react';
 import { UsergroupAddOutlined, AppstoreOutlined, MailOutlined, SmallDashOutlined } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
 
-
 const { Header, Content, Footer, Sider } = Layout;
 
-
-    const items = [
-        {
-          key: '1',
-          icon: <UsergroupAddOutlined />, 
-          label: 'Cadastrar Empresa',
-        },
-        {
-          key: '2',
-          icon: <AppstoreOutlined />,
-          label: 'Cadastrar Ong',
-        },
-        {
-          key: '3',
-          icon: <MailOutlined />,
-          label: 'Messages',
-        },
-        {
-          key: '4',
-          icon: <SmallDashOutlined />,
-          label: 'Linha de tempo',
-        },
-      ];
-  
+const items = [
+  {
+    key: '1',
+    icon: <UsergroupAddOutlined />, 
+    label: 'Cadastrar Empresa',
+    onClick: () => window.location.href = '/cadastrar-empresa',
+  },
+  {
+    key: '2',
+    icon: <AppstoreOutlined />,
+    label: 'Cadastrar Ong',
+  },
+  {
+    key: '3',
+    icon: <MailOutlined />,
+    label: 'Messages',
+  },
+  {
+    key: '4',
+    icon: <SmallDashOutlined />,
+    label: 'Linha de tempo',
+  },
+];
 
 const Home = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
+  
   return (
     <Layout>
       <Sider
@@ -47,7 +46,7 @@ const Home = () => {
         }}
       >
         <div className="demo-logo-vertical" />
-        <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']} items={items} />
+        <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} items={items} />
       </Sider>
       <Layout>
         <Header
@@ -58,18 +57,18 @@ const Home = () => {
         />
         <Content
           style={{
-            margin: 'px 16px 0',
+            margin: '24px 16px 0',
           }}
         >
           <div
             style={{
-              padding: 400,
+              padding: 24,
               minHeight: 360,
               background: colorBgContainer,
               borderRadius: borderRadiusLG,
             }}
           >
-            
+            {/* Conteúdo principal da página */}
           </div>
         </Content>
         <Footer
@@ -83,4 +82,6 @@ const Home = () => {
     </Layout>
   );
 };
+
 export default Home;
+

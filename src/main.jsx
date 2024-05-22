@@ -1,8 +1,8 @@
-
 import React from 'react';
 import * as ReactDOM from "react-dom/client";
 import Home from './routes/home';
 import Login from './routes/login';
+import CadastrarEmpresa from './routes/cadastrar-empresa'; // Importe o novo componente
 import {
   createBrowserRouter,
   RouterProvider,
@@ -10,14 +10,17 @@ import {
 import "./pages.css";
 
 const router = createBrowserRouter([
-  
   {
     path: "/",
-    element: <Login/>,
+    element: <Login />,
   },
   {
     path: "/home",
-    element: <Home/>,
+    element: <Home />,
+  },
+  {
+    path: "/cadastrar-empresa", // Adicione a nova rota
+    element: <CadastrarEmpresa />,
   }
 ]);
 

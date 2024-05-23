@@ -33,7 +33,7 @@ const { Header, Content, Footer, Sider } = Layout;
       ];
   
 
-const Home = () => {
+const Menssagens = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
@@ -83,4 +83,4 @@ const Home = () => {
     </Layout>
   );
 };
-export default Home;
+export default Menssagens;

@@ -1,33 +1,36 @@
 import React, { useState } from 'react';
 import { Alert, Checkbox } from 'antd';
-import { LoginOutlined, UserOutlined } from '@ant-design/icons'; 
+import { LoginOutlined, UserOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom'; // Importe o hook useNavigate
 
 
 const UserName = ({ name }) => (
-  <div>
+  <div className="input-container">
     <UserOutlined />
     <input type="text" name={name} placeholder="Login" />
   </div>
 );
 
 const Password = ({ name }) => (
-  <div>
+  <div className="input-container">
     <LoginOutlined />
     <input type="password" name={name} placeholder="Senha" />
   </div>
 );
 
 const Submit = ({ children }) => (
-  <button type="submit">{children}</button>
+  <button type="submit" className="submit-button">{children}</button>
 );
 
 const LoginDemo = () => {
   const [notice, setNotice] = useState('');
   const [autoLogin, setAutoLogin] = useState(true);
+  const navigate = useNavigate(); // Inicialize o hook useNavigate
 
   const onSubmit = (e) => {
     e.preventDefault();
-    // LOGICA AQUI
+    // Lógica de autenticação aqui
+    navigate('/home'); // Redirecionamento para a página home
   };
 
   const changeAutoLogin = (e) => {
@@ -36,7 +39,10 @@ const LoginDemo = () => {
 
   return (
     <div className="login-warp login-background">
-      <form onSubmit={onSubmit}>
+      <div className="logo-container">
+        <img src="/imagem1.jpeg" alt="Logo" className="logo" />
+      </div>
+      <form onSubmit={onSubmit} className="login-form">
         {notice && (
           <Alert
             style={{ marginBottom: 23 }}
@@ -48,7 +54,7 @@ const LoginDemo = () => {
         )}
         <UserName name="username" />
         <Password name="password" />
-        <div>
+        <div className="options">
           <Checkbox checked={autoLogin} onChange={changeAutoLogin}>
             Mostrar Senha
           </Checkbox>

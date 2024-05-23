@@ -1,17 +1,19 @@
 import React from 'react';
 import { UsergroupAddOutlined, AppstoreOutlined, MailOutlined, SmallDashOutlined } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
-
+ 
 
 const { Header, Content, Footer, Sider } = Layout;
-
+ 
 
     const items = [
-        {
-          key: '1',
-          icon: <UsergroupAddOutlined />, 
-          label: 'Cadastrar Empresa',
-        },
+      {
+        key: '1',
+        icon: <UsergroupAddOutlined />,
+        label: 'Cadastrar Empresa',
+        onClick: () => window.location.href = '/cadastrar-empresa',
+ 
+      },
         {
           key: '2',
           icon: <AppstoreOutlined />,
@@ -28,8 +30,8 @@ const { Header, Content, Footer, Sider } = Layout;
           label: 'Linha de tempo',
         },
       ];
-  
-
+ 
+ 
 const Home = () => {
   const {
     token: { colorBgContainer, borderRadiusLG },
@@ -58,7 +60,7 @@ const Home = () => {
         />
         <Content
           style={{
-            margin: 'px 16px 0',
+            margin: '24px 16px 0',
           }}
         >
           <div
@@ -69,7 +71,7 @@ const Home = () => {
               borderRadius: borderRadiusLG,
             }}
           >
-            
+           
           </div>
         </Content>
         <Footer

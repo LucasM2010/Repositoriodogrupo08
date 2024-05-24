@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Alert, Checkbox } from 'antd';
 import { LoginOutlined, UserOutlined } from '@ant-design/icons';
-import { useNavigate } from 'react-router-dom'; // Importe o hook useNavigate
+import { useNavigate } from 'react-router-dom'; 
 
 
 const UserName = ({ name }) => (
@@ -25,12 +25,12 @@ const Submit = ({ children }) => (
 const LoginDemo = () => {
   const [notice, setNotice] = useState('');
   const [autoLogin, setAutoLogin] = useState(true);
-  const navigate = useNavigate(); // Inicialize o hook useNavigate
+  const navigate = useNavigate(); 
 
   const onSubmit = (e) => {
     e.preventDefault();
     // Lógica de autenticação aqui
-    navigate('/home'); // Redirecionamento para a página home
+    navigate('/home'); 
   };
 
   const changeAutoLogin = (e) => {

@@ -4,35 +4,6 @@ import { Layout, Menu, theme } from 'antd';
 
 const { Header, Content, Footer, Sider } = Layout;
 
-<<<<<<< HEAD
-
-    const items = [
-      {
-        key: '1',
-        icon: <UsergroupAddOutlined />, 
-        label: 'Cadastrar Empresa',
-        onClick: () => window.location.href = '/cadastrar-empresa'
-      },
-        {
-          key: '2',
-          icon: <AppstoreOutlined />,
-          label: 'Cadastrar Ong',
-          onClick: () => window.location.href = '/cadastrar-ong'
-        },
-        {
-          key: '3',
-          icon: <MailOutlined />,
-          label: 'Messages',
-        },
-        {
-          key: '4',
-          icon: <SmallDashOutlined />,
-          label: 'Linha de tempo',
-          onClick: () => window.location.href = '/linhadetempo'
-        },
-      ];
-  
-=======
 const items = [
   {
     key: '1',
@@ -44,6 +15,7 @@ const items = [
     key: '2',
     icon: <AppstoreOutlined />,
     label: 'Cadastrar Ong',
+    onClick: () => window.location.href = '/cadastrar-ong',
   },
   {
     key: '3',
@@ -54,10 +26,9 @@ const items = [
     key: '4',
     icon: <SmallDashOutlined />,
     label: 'Linha do Tempo',
-    onClick: () => window.location.href = '/linha-do-tempo', // Adicione esta linha
+    onClick: () => window.location.href = '/linha-do-tempo',
   },
 ];
->>>>>>> 300f35df29dc701a5191b9086ce722a6ce8992b6
 
 const Home = () => {
   const {
@@ -80,7 +51,7 @@ const Home = () => {
         <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']} items={items} />
       </Sider>
       <Layout>
-      <Header style={{ display: 'flex', alignItems: 'center', padding: 70, background: '#d3d3d3' }}>
+        <Header style={{ display: 'flex', alignItems: 'center', padding: 70, background: '#d3d3d3' }}>
           <img src="/imagem1.jpeg" alt="Logo" className="logo" />
         </Header>
         <Content
@@ -90,13 +61,9 @@ const Home = () => {
         >
           <div
             style={{
-<<<<<<< HEAD
-              padding: 350,
-=======
               padding: 24,
->>>>>>> 300f35df29dc701a5191b9086ce722a6ce8992b6
               minHeight: 360,
-              background: '#d3d3d3',
+              background: colorBgContainer,
               borderRadius: borderRadiusLG,
             }}
           >

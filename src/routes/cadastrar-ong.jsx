@@ -44,6 +44,7 @@ const CadastrarOng = () => {
       key: '3',
       icon: <MailOutlined />,
       label: 'Messages',
+      onClick: () => window.location.href = '/menssagens'
     },
     {
       key: '4',

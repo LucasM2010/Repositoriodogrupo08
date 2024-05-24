@@ -8,14 +8,8 @@ const items = [
   {
     key: '1',
     icon: <UsergroupAddOutlined />,
-    label: 'Cadastrar Empresa',
+    label: 'Cadastro',
     onClick: () => window.location.href = '/cadastrar-empresa',
-  },
-  {
-    key: '2',
-    icon: <AppstoreOutlined />,
-    label: 'Cadastrar Ong',
-    onClick: () => window.location.href = '/cadastrar-ong',
   },
   {
     key: '3',
@@ -63,7 +57,7 @@ const Home = () => {
           <div
             style={{
               padding: 24,
-              minHeight: 360,
+              minHeight: 700,
               background: colorBgContainer,
               borderRadius: borderRadiusLG,
             }}

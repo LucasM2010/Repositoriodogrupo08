@@ -9,6 +9,7 @@ import LinhaDoTempo from './routes/LinhaDoTempo';
 import Menssagens from './routes/menssages';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./pages.css";
+import app from './app';
 
 const router = createBrowserRouter([
   {
@@ -44,5 +45,10 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+  </React.StrictMode>
+);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+      <App />
   </React.StrictMode>
 );

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Steps, Button, Spin, Layout, Menu } from 'antd';
 import { Link } from 'react-router-dom';
-import { LoadingOutlined, UsergroupAddOutlined, AppstoreOutlined, MailOutlined, SmallDashOutlined } from '@ant-design/icons';
+import { LoadingOutlined, HomeOutlined, AppstoreOutlined, MailOutlined, SmallDashOutlined } from '@ant-design/icons';
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -25,18 +25,8 @@ const items = [
 ];
 
 const menuItems = [
-  {
-    key: '1',
-    icon: <UsergroupAddOutlined />,
-    label: 'Cadastrar Empresa',
-    onClick: () => window.location.href = '/cadastrar-empresa'
-  },
-  {
-    key: '2',
-    icon: <AppstoreOutlined />,
-    label: 'Cadastrar Ong',
-    onClick: () => window.location.href = '/cadastrar-ong'
-  },
+  
+  
   {
     key: '3',
     icon: <MailOutlined />,
@@ -49,6 +39,12 @@ const menuItems = [
     label: 'Linha de tempo',
     onClick: () => window.location.href = '/linhadetempo'
   },
+  {
+    key: '7',
+    icon: <HomeOutlined />,
+    label: 'Home',
+    onClick: () => window.location.href = '/home'
+  }
 ];
 
 const LinhaDoTempo = () => (

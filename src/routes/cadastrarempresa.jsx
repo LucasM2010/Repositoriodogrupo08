@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Alert, Layout, Menu } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { UsergroupAddOutlined, AppstoreOutlined, MailOutlined, SmallDashOutlined } from '@ant-design/icons';
+import { UsergroupAddOutlined, AppstoreOutlined, HomeOutlined, SmallDashOutlined } from '@ant-design/icons';
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -11,8 +11,7 @@ const CadastrarEmpresa = () => {
   const navigate = useNavigate();
  
   const onFinish = (values) => {
-    console.log('Success:', values);
-    // Adicione a lógica de envio dos dados aqui
+    
     setAlert({ type: 'success', message: 'Empresa cadastrada com sucesso!' });
   };
 
@@ -38,18 +37,13 @@ const CadastrarEmpresa = () => {
       label: 'Cadastrar Ong',
       onClick: () => navigate('/cadastrar-ong')
     },
+    
     {
-      key: '3',
-      icon: <MailOutlined />,
-      label: 'Messages',
-      onClick: () => window.location.href = '/menssagens'
-    },
-    {
-      key: '4',
-      icon: <SmallDashOutlined />,
-      label: 'Linha de tempo',
-      onClick: () => navigate('/linhadetempo')
-    },
+      key: '7',
+      icon: <HomeOutlined />,
+      label: 'Home',
+      onClick: () => window.location.href = '/home'
+    }
   ];
 
   return (

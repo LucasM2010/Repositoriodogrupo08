@@ -1,5 +1,5 @@
 import React from 'react';
-import { UsergroupAddOutlined, AppstoreOutlined, MailOutlined, SmallDashOutlined } from '@ant-design/icons';
+import { UsergroupAddOutlined, LogoutOutlined, MailOutlined, SmallDashOutlined } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -21,8 +21,24 @@ const items = [
     key: '4',
     icon: <SmallDashOutlined />,
     label: 'Linha do Tempo',
-    onClick: () => window.location.href = '/linha-do-tempo',
+    onClick: () => window.location.href = '/linhadetempo',
   },
+  {
+    key: '4',
+    icon: <SmallDashOutlined />,
+    label: 'Empresas e Ongs',
+    onClick: () => window.location.href = '/empresaseongs',
+  },
+  {
+    key: '6',
+    icon: <LogoutOutlined />,
+    label: 'Sair',
+    onClick: () => {
+      
+      window.location.href = '/';
+    },
+    style: { position: 'absolute', bottom: '0', width: '100%' },
+  }
 ];
 
 const Home = () => {
@@ -62,8 +78,13 @@ const Home = () => {
               borderRadius: borderRadiusLG,
             }}
           >
-            {/* Conteúdo principal da página */}
+            {  <h1 style={{ textAlign: 'center' }} className="effect-message">Conectando corações solidários: unindo empresas e ONGs para fazer a diferença e espalhar esperança.</h1>}          
+            <div className="image-container">
+              <img src="/image1.png" alt="Image" className="hover-image" />
+              <img src="/image.png" alt="Image" className="hover-image" />
+            </div>
           </div>
+          
         </Content>
         <Footer
           style={{

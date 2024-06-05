@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { UsergroupAddOutlined, AppstoreOutlined, MailOutlined, SmallDashOutlined } from '@ant-design/icons';
+import { UsergroupAddOutlined, HomeOutlined, MailOutlined, SmallDashOutlined } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
 import Chat from './Chat'; 
 
@@ -13,18 +13,8 @@ const Menssagens = () => {
   const [buttonColor, setButtonColor] = useState("default"); 
 
   const items = [
-    {
-      key: '1',
-      icon: <UsergroupAddOutlined />,
-      label: 'Cadastrar Empresa',
-      onClick: () => window.location.href = '/cadastrar-empresa'
-    },
-    {
-      key: '2',
-      icon: <AppstoreOutlined />,
-      label: 'Cadastrar Ong',
-      onClick: () => window.location.href = '/cadastrar-ong'
-    },
+    
+    
     {
       key: '3',
       icon: <MailOutlined />,
@@ -40,6 +30,12 @@ const Menssagens = () => {
       label: 'Linha de tempo',
       onClick: () => window.location.href = '/linhadetempo'
     },
+    {
+      key: '7',
+      icon: <HomeOutlined />,
+      label: 'Home',
+      onClick: () => window.location.href = '/home'
+    }
   ];
 
   return (

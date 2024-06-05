@@ -7,6 +7,7 @@ import CadastrarOng from './routes/cadastrar-ong';
 import TelaDeCadastro from './routes/teladecadastro';
 import LinhaDoTempo from './routes/LinhaDoTempo';
 import Menssagens from './routes/menssages';
+import EmpresasEOngs from './routes/empresaseogns'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./pages.css";
 import app from './app';
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/menssagens",
     element: <Menssagens />,
+  },
+  {
+    path: "/empresaseongs",
+    element: <EmpresasEOngs />,
   }
 ]);
 

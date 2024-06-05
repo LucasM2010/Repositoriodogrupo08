@@ -1,6 +1,6 @@
 import React from 'react';
-import { Form, Input, Button, Select } from 'antd';
-import { Link } from 'react-router-dom';
+import { Form, Input, Button, Select, message } from 'antd';
+import { Link, useNavigate } from 'react-router-dom';
 
 const { Option } = Select;
 const formItemLayout = {
@@ -28,13 +28,21 @@ const tailFormItemLayout = {
 
 const TelaDeCadastro = () => {
   const [form] = Form.useForm();
+  const navigate = useNavigate();
 
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
+    message.success('Registrado com sucesso!');
+    setTimeout(() => {
+      navigate('/');
+    }, 2000); 
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '50vh' }}>
+    <div className="register-warp register-background" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', height: '100vh' }}>
+      <div className="logo-container" style={{ marginBottom: 50, marginLeft: 180 }}>
+        <img src="/imagem1.jpeg" alt="Logo" className="logo" />
+      </div>
       <Form
         {...formItemLayout}
         form={form}
@@ -134,7 +142,7 @@ const TelaDeCadastro = () => {
             Registrar
           </Button>
           <Button type="default">
-            <Link to="/home">Voltar</Link>
+            <Link to="/">Voltar</Link>
           </Button>
         </Form.Item>
       </Form>

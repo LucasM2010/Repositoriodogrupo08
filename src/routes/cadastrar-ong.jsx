@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Alert, Layout, Menu } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { UsergroupAddOutlined, AppstoreOutlined, MailOutlined, SmallDashOutlined } from '@ant-design/icons';
+import { UsergroupAddOutlined, AppstoreOutlined, MailOutlined, HomeOutlined } from '@ant-design/icons';
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -14,7 +14,7 @@ const CadastrarOng = () => {
 
   const onFinish = (values) => {
     console.log('Success:', values);
-    // Lógica
+    
     setAlert({ type: 'success', message: 'ONG cadastrada com sucesso!' });
   };
 
@@ -40,18 +40,13 @@ const CadastrarOng = () => {
       label: 'Cadastrar Ong',
       onClick: () => navigate('/cadastrar-ong')
     },
+    
     {
-      key: '3',
-      icon: <MailOutlined />,
-      label: 'Messages',
-      onClick: () => window.location.href = '/menssagens'
-    },
-    {
-      key: '4',
-      icon: <SmallDashOutlined />,
-      label: 'Linha de tempo',
-      onClick: () => navigate('/linhadetempo')
-    },
+      key: '7',
+      icon: <HomeOutlined />,
+      label: 'Home',
+      onClick: () => window.location.href = '/home'
+    }
   ];
 
   return (

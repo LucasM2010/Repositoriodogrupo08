@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Alert, Checkbox } from 'antd';
+import { Alert, Checkbox, message } from 'antd';
 import { LoginOutlined, UserOutlined } from '@ant-design/icons';
-import { useNavigate } from 'react-router-dom'; 
-
+import { useNavigate, Link } from 'react-router-dom'; 
 
 const UserName = ({ name }) => (
   <div className="input-container">
@@ -29,8 +28,10 @@ const LoginDemo = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    // Lógica de autenticação aqui
-    navigate('/home'); 
+
+    message.loading('Fazendo Login...', 1.5).then(() => {
+      navigate('/home');
+    });
   };
 
   const changeAutoLogin = (e) => {
@@ -39,7 +40,7 @@ const LoginDemo = () => {
 
   return (
     <div className="login-warp login-background">
-      <div className="logo-container">
+      <div className="logo-container" style={{ marginLeft: 75 }}>
         <img src="/imagem1.jpeg" alt="Logo" className="logo" />
       </div>
       <form onSubmit={onSubmit} className="login-form">
@@ -63,6 +64,10 @@ const LoginDemo = () => {
           </a>
         </div>
         <Submit>Login</Submit>
+        <div style={{ marginTop: 10, textAlign: 'center' }}>
+          <span>Não tem uma conta? </span>
+          <Link to="/teladecadastro">Cadastre-se</Link>
+        </div>
       </form>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Input, Button, Select, message } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
+
 import { httpAxios } from "../Services/httpAxios";
 
 const { Option } = Select;
@@ -15,6 +16,9 @@ const formItemLayout = {
     sm: { span: 16 },
   },
 };
+
+
+
 
 const tailFormItemLayout = {
   wrapperCol: {
@@ -33,6 +37,7 @@ const TelaDeCadastro = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
 
+
   const onFinish = async (values) => {
     try {
       console.log('Form values:', values);
@@ -46,6 +51,14 @@ const TelaDeCadastro = () => {
       console.error('Erro ao registrar:', error);
       message.error('Erro ao registrar. Tente novamente.');
     }
+
+  const onFinish = (values) => {
+    console.log('Received values of form: ', values);
+    message.success('Registrado com sucesso!');
+    setTimeout(() => {
+      navigate('/');
+    }, 2000); 
+
   };
 
   return (
@@ -141,8 +154,13 @@ const TelaDeCadastro = () => {
           ]}
         >
           <Select placeholder="Selecione seu sexo">
+
             <Option value="male">Homem</Option>
             <Option value="female">Mulher</Option>
+
+            <Option value="male">Mulher</Option>
+            <Option value="female">Homem</Option>
+
             <Option value="other">Outros</Option>
           </Select>
         </Form.Item>

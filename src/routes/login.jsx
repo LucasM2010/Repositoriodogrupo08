@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { Alert, Checkbox, message } from 'antd';
 import { LoginOutlined, UserOutlined } from '@ant-design/icons';
+
 import { useNavigate, Link } from 'react-router-dom';
 import { httpAxios } from "../Services/httpAxios";
+
+import { useNavigate, Link } from 'react-router-dom'; 
+
 
 const UserName = ({ name }) => (
   <div className="input-container">
@@ -25,6 +29,7 @@ const Submit = ({ children }) => (
 const LoginDemo = () => {
   const [notice, setNotice] = useState('');
   const [autoLogin, setAutoLogin] = useState(true);
+
   const navigate = useNavigate();
 
   const onSubmit = async (e) => {
@@ -48,6 +53,16 @@ const LoginDemo = () => {
       setNotice('Erro ao fazer login. Verifique suas credenciais.');
       message.error('Erro ao fazer login.');
     }
+
+  const navigate = useNavigate(); 
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    message.loading('Fazendo Login...', 1.5).then(() => {
+      navigate('/home');
+    });
+
   };
 
   const changeAutoLogin = (e) => {

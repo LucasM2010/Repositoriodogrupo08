@@ -1,0 +1,188 @@
+.login-background {
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    height: 35vh; 
+  }
+  
+  
+.login-warp {
+    max-width: 370px;
+    margin: auto;
+    padding: 70px;
+    border: 5px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .login-warp form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-warp input[type="text"],
+  .login-warp input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login-warp button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #1890ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-warp button[type="submit"]:hover {
+    background-color: #40a9ff;
+  }
+  
+  .login-warp .ant-checkbox-wrapper {
+    margin-bottom: 10px;
+  }
+  
+  .login-warp a {
+    float: right;
+  }
+  .logo {
+    width: 170px; 
+    height: 10px;
+
+  }
+  
+  
+.cadastrar-ong {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #d3d3d3;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 150px;
+  border-radius: 8px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ant-form-item {
+  margin-bottom: 16px;
+}
+
+.ant-btn-primary {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background-color: #45A049;
+  border-color: #45A049;
+}
+
+.ant-btn-default {
+  border-color: #d9d9d9;
+}
+
+.cadastrar-empresa {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #d3d3d3;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  max-width: 170px;
+  height: auto;
+  margin-left: -55px; 
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ant-form-item {
+  margin-bottom: 16px;
+}
+
+.ant-btn-primary {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background-color: #45A049;
+  border-color: #45A049;
+}
+
+.ant-btn-default {
+  border-color: #d9d9d9;
+}
+
+
+
+.logo {
+  max-width: 170px;
+  height: auto;
+  margin-left: -55px; 
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.effect-message {
+  text-align: center;
+  font-size: 24px;
+  color: #333; 
+  margin: 0; 
+  padding: 20px; 
+  background-color: #f0f0f0;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+
+.hover-image {
+  width: 300px; 
+  height: 300px; 
+  margin: 100px; 
+  transition: transform 0.1s ease;
+  border-radius: 20px; 
+}
+
+.hover-image:hover {
+  transform: scale(1.4); 
+  border-radius: 10px;
+}
+
+
+

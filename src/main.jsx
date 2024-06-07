@@ -12,10 +12,6 @@ import EmpresasEOngs from './routes/empresaseogns';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./pages.css";
 
-import EmpresasEOngs from './routes/empresaseogns'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import "./pages.css";
-import app from './app';
 
 
 const router = createBrowserRouter([

@@ -56,7 +56,7 @@ const LoginDemo = () => {
 
   return (
     <div className="login-warp login-background">
-      <div className="logo-container" style={{ marginLeft: 75 }}>
+      <div className="logo-container" style={{ marginLeft: 100 }}>
         <img src="/imagem1.jpeg" alt="Logo" className="logo" />
       </div>
       <form onSubmit={onSubmit} className="login-form">
